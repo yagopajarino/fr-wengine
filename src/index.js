@@ -17,7 +17,7 @@ import p3 from "./p3.jpeg"
 import r1 from "./logoFB.png"
 import r2 from "./logoIG.png"
 import r3 from "./logoWPP.png"
-import icon from "./iconWengine.png"
+import icon from "./iconoW.png"
 
 // aplica imagenes
 const logo = document.querySelector("#logoImg")
@@ -53,3 +53,27 @@ for (let index = 0; index < redes.length; index++) {
 const iconLink = document.querySelector("#iconLink")
 iconLink.href = icon
 // ---------------------
+
+function myFunction() {
+    const div = document.querySelector(".linksContainer")
+    const anchors = document.querySelectorAll(".navLink")
+    if (div.className === "linksContainer") {
+        div.className += " active";
+        anchors.forEach(anchor => {
+            anchor.style.display = "block"
+        });
+    } else {
+        div.className = "linksContainer";
+        anchors.forEach(anchor => {
+            anchor.style.display = "none"
+        });
+    }
+  }
+
+const dropBtn = document.querySelector("#arrowCont")
+dropBtn.addEventListener("click", myFunction)
+
+const links = document.querySelectorAll(".navLink")
+links.forEach(link => {
+    link.addEventListener("click", myFunction)
+});

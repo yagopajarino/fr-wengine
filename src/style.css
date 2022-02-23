@@ -59,10 +59,11 @@ section{
     display: flex;
     flex-wrap: wrap;
     background-color: #ffecdf;
-    padding-top: 3rem;
+    padding-top: 1rem;
     flex-direction: row;
     padding-bottom: 0;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .servTile {
@@ -112,11 +113,16 @@ section{
 }
 
 .promTile {
-    margin: 1rem;
-    width: 40%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    max-width: 29%;
+    margin: 1rem;
+    min-width: 300px;
+}
+
+.promImg {
+    width: 100%;
 }
 
 .pedirCupon:hover {
@@ -176,6 +182,11 @@ footer{
 .qsText {
     font-family: 'Quicksand', sans-serif;
     width: 50%;
+    padding: 1rem 0;
+}
+
+#qsImg {
+    width: 80%;
 }
 
 .underline {
@@ -185,4 +196,65 @@ footer{
 
 .strong {
     font-weight: 600;
+}
+
+#arrowCont {
+    position: absolute;
+    right: 43px;
+    top: 30px;
+}
+
+.arrow {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background: #cdcdcd;
+    border-radius: 3px;
+}
+    
+
+.arrow:first-child{
+    transform-origin: 0% 0%;
+}
+
+.arrow:nth-last-child(2){
+    transform-origin: 0% 100%;
+}
+
+
+
+
+/* Media rules */
+@media (max-width: 480px) {
+    #qsImg {
+        height: 0;
+    }
+    .qsText {
+        width: 100%;
+    }
+    .servGrid, .promGrid, iframe {
+        max-width: 300px;
+    }
+    .formContacto {
+        padding-top:1rem
+    }
+
+    /* Responsive navigation links */
+    .linksContainer {
+        height: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        right: -180px;
+    }
+
+    .active {
+        height: 90px;
+    }
+
+    .navLink {
+        display: none;
+    }
 }
