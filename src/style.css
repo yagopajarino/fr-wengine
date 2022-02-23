@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.headerCont {
+    background-color: rgb(255 103 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+main {
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+section{
+    padding: 1rem 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logoImg {
+    padding: 0.5rem 0.5rem;
+    margin: 0.2rem 0;
+}
+
+.navLink {
+    padding: 0 1rem;
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+}
+
+.navLink:hover, #homeLink:hover {
+    opacity: 0.5;
+}
+
+#quienesSomos {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffecdf;
+    padding-top: 3rem;
+    flex-direction: row;
+    padding-bottom: 0;
+    justify-content: center;
+}
+
+.servTile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 29%;
+    margin: 1rem;
+    min-width: 300px;
+}
+
+.servImg {
+    width: 100%;
+}
+
+.servGrid, .promGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.serTitle, .pedirCupon {
+    text-align: center;
+    background-color: rgb(255 103 1);
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.25rem 0;
+    width: 100%;
+}
+
+.servDes {
+    color: #494949;
+    font-size: 0.7rem;
+    padding: 0.4rem 0;
+    line-height: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.sectionTitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(255 140 63);
+}
+
+.promTile {
+    margin: 1rem;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.pedirCupon:hover {
+    background-color: #c54f00;
+}
+
+.contactoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.mapa {
+    margin: 0 1rem;
+}
+
+.datosWengine {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.datosWengine>span {
+    padding: 0.25rem 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #494949;
+}
+
+.orange {
+    color: rgb(255 103 1);
+}
+
+.redesLogo {
+    height: 70px;
+    width: 70px;
+}
+
+.redesWengine {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    background-color: #494949;
+    color: #ffffff;
+}
+
+.qsText {
+    font-family: 'Quicksand', sans-serif;
+    width: 50%;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.strong {
+    font-weight: 600;
+}
