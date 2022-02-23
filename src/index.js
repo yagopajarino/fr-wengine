@@ -72,8 +72,3 @@ function myFunction() {
 
 const dropBtn = document.querySelector("#arrowCont")
 dropBtn.addEventListener("click", myFunction)
-
-const links = document.querySelectorAll(".navLink")
-links.forEach(link => {
-    link.addEventListener("click", myFunction)
-});

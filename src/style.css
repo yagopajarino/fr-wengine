@@ -199,9 +199,7 @@ footer{
 }
 
 #arrowCont {
-    position: absolute;
-    right: 43px;
-    top: 30px;
+    display: none;
 }
 
 .arrow {
@@ -256,5 +254,12 @@ footer{
 
     .navLink {
         display: none;
+    }
+
+    #arrowCont {
+        display: block;
+        position: absolute;
+        right: 43px;
+        top: 30px;    
     }
 }
