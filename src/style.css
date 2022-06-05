@@ -4,6 +4,7 @@
 
 html {
     font-size: 20px;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -15,19 +16,13 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.headerCont {
+header {
     background-color: rgb(255 103 1);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
-}
-
-main {
-    height: 100vh;
-    scroll-behavior: smooth;
-    overflow-y: scroll;
 }
 
 section{
@@ -49,6 +44,7 @@ section{
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     color: #ffffff;
+    transition: 0.2s ease;
 }
 
 .navLink:hover, #homeLink:hover {
@@ -220,8 +216,22 @@ footer{
     transform-origin: 0% 100%;
 }
 
+#arrowDiv {
+    display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  padding: 0.5rem;
+  background-color: #ffc7a2;
+  border-radius: 6px;
+  box-shadow: 4px 4px 7px 0px #0c0c0c38;
+}
 
-
+#arrowImg {
+    width: 30px;
+    color: #c54f00;
+}
 
 /* Media rules */
 @media (max-width: 480px) {
