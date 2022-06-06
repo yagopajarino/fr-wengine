@@ -1,0 +1,31 @@
+.quienesSomos {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffecdf;
+    padding-top: 1rem;
+    flex-direction: row;
+    padding-bottom: 0;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.quienesSomos img {
+    width: 25%;
+}
+
+.quienesSomos > div {
+    font-family: 'Quicksand', sans-serif;
+    width: 50%;
+    padding: 1rem 0;
+}
+
+@media (max-width: 480px) {
+    .quienesSomos img {
+        width: 0;
+    }
+
+    .quienesSomos > div {
+        width: 100%;
+    }
+
+}

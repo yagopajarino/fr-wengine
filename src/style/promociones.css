@@ -1,0 +1,39 @@
+.promociones .promGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.promociones .promTile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 29%;
+    margin: 1rem;
+    min-width: 300px;
+}
+
+.promociones .promTile a {
+    text-align: center;
+    background-color: rgb(255 103 1);
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.25rem 0;
+    width: 100%;
+}
+
+.promociones .promTile a:hover {
+    background-color: #c54f00;
+}
+
+.promociones img {
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .promociones .promGrid {
+        max-width: 300px;
+    }
+}
+

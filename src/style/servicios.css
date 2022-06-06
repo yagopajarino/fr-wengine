@@ -1,0 +1,37 @@
+.servicios .servGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.servicios .servTile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 29%;
+    margin: 1rem;
+    min-width: 300px;
+}
+
+
+.servicios .servTile img {
+    width: 100%;
+}
+
+.servicios span {
+    color: #494949;
+    font-size: 0.7rem;
+    padding: 0.4rem 0;
+    line-height: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+
+@media (max-width: 480px) {
+    .servicios .servGrid {
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,47 @@
+.contacto .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.contacto .mapa {
+    margin: 0 1rem;
+}
+
+.contacto .datosWengine {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.contacto .datosWengine>span {
+    padding: 0.25rem 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #494949;
+}
+
+
+.contacto .redesLogo {
+    height: 70px;
+    width: 70px;
+}
+
+.contacto .redesWengine {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+
+@media (max-width: 480px) {
+    .contacto iframe {
+        max-width: 300px;
+    }
+
+    .contacto .formContacto {
+        padding-top:1rem;
+    }
+}

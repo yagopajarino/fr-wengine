@@ -1,0 +1,57 @@
+/* Hamburger menu */
+
+#hamburgerCont {
+    display: none;
+}
+
+.hamb {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background: #cdcdcd;
+    border-radius: 3px;
+}
+    
+
+.hamb:first-child{
+    transform-origin: 0% 0%;
+}
+
+.hamb:nth-last-child(2){
+    transform-origin: 0% 100%;
+}
+
+@media (max-width: 480px) {
+    #hamburgerCont {
+        display: block;
+        position: absolute;
+        right: 43px;
+        top: 30px;    
+    }
+}
+
+/* Back to top arrow */
+
+#arrowDiv {
+    display: block; 
+  position: fixed;
+  bottom: -100px;
+  right: 30px;
+  z-index: 99;
+  padding: 0.5rem;
+  background-color: #ffc7a2;
+  border-radius: 5px;
+  box-shadow: 4px 4px 7px 0px #0c0c0c38;
+  transition: 0.5s ease;
+}
+
+#arrowDiv:hover {
+    background-color: #ff9e5e;
+}
+
+#arrowImg {
+    width: 30px;
+    color: #c54f00;
+}
+

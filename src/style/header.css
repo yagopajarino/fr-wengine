@@ -1,0 +1,48 @@
+header {
+    background-color: rgb(255 103 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+header a {
+    padding: 0 1rem;
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    transition: 0.2s ease;
+}
+
+header a:hover {
+    opacity: 0.5;
+}
+
+header img {
+    padding: 0.5rem 0.5rem;
+    margin: 0.2rem 0;
+}
+
+@media (max-width: 480px) {
+    header .linksContainer a {
+        display: none;
+        padding: 0.5rem 1.5rem;
+    }
+
+    header .linksContainer {
+        height: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        right: -140px;
+        margin-bottom: 1rem;
+    }
+
+    header .active {
+        height: 168px;
+    }
+
+}
