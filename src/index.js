@@ -1,34 +1,40 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
-import "./style.css";
-import i1 from "./logo.png";
-import i2 from "./quienes-somos-wengine.png";
-import s1 from "./serv1.jpeg";
-import s2 from "./serv2.jpeg";
-import s3 from "./serv3.jpeg";
-import s4 from "./serv4.jpeg";
-import s5 from "./serv5.jpeg";
-import s6 from "./serv6.jpeg";
-import s7 from "./serv7.jpeg";
-import s8 from "./serv8.jpeg";
-import s9 from "./serv9.jpeg";
-import p1 from "./p1.jpeg";
-import p2 from "./p2.jpeg";
-import p3 from "./p3.jpeg";
-import r1 from "./logoFB.png";
-import r2 from "./logoIG.png";
-import r3 from "./logoWPP.png";
-import icon from "./iconoW.png";
-import arrow from "./arrow-up-solid.svg";
+import "./style/style.css";
+import "./style/header.css";
+import "./style/quienesSomos.css";
+import "./style/servicios.css";
+import "./style/promociones.css";
+import "./style/contacto.css";
+import "./style/efectos.css";
+import i1 from "./static/logo.png";
+import i2 from "./static/quienes-somos-wengine.png";
+import s1 from "./static/serv1.jpeg";
+import s2 from "./static/serv2.jpeg";
+import s3 from "./static/serv3.jpeg";
+import s4 from "./static/serv4.jpeg";
+import s5 from "./static/serv5.jpeg";
+import s6 from "./static/serv6.jpeg";
+import s7 from "./static/serv7.jpeg";
+import s8 from "./static/serv8.jpeg";
+import s9 from "./static/serv9.jpeg";
+import p1 from "./static/p1.jpeg";
+import p2 from "./static/p2.jpeg";
+import p3 from "./static/p3.jpeg";
+import r1 from "./static/logoFB.png";
+import r2 from "./static/logoIG.png";
+import r3 from "./static/logoWPP.png";
+import icon from "./static/iconoW.png";
+import arrow from "./static/arrow-up-solid.svg";
 
 // aplica imagenes
 const logo = document.querySelector("#logoImg");
 logo.src = i1;
 
-const quienesSomos = document.querySelector("#qsImg");
+const quienesSomos = document.querySelector(".quienesSomos > img");
 quienesSomos.src = i2;
 
-const servicios = document.querySelectorAll(".servImg");
+const servicios = document.querySelectorAll(".servTile > img");
 const servImgs = [s1, s2, s3, s4, s5, s6, s7, s8, s9];
 for (let index = 0; index < servicios.length; index++) {
   const element = servicios[index];
@@ -36,7 +42,7 @@ for (let index = 0; index < servicios.length; index++) {
   element.src = servImg;
 }
 
-const promociones = document.querySelectorAll(".promImg");
+const promociones = document.querySelectorAll(".promTile > img");
 const promImg = [p1, p2, p3];
 for (let index = 0; index < promociones.length; index++) {
   const element = promociones[index];
@@ -62,7 +68,8 @@ arrowImg.src = arrow;
 
 function myFunction() {
   const div = document.querySelector(".linksContainer");
-  const anchors = document.querySelectorAll(".navLink");
+  const anchors = div.querySelectorAll("a");
+  console.log(anchors);
   if (div.className === "linksContainer") {
     div.className += " active";
     anchors.forEach((anchor) => {
@@ -76,21 +83,22 @@ function myFunction() {
   }
 }
 
-const dropBtn = document.querySelector("#arrowCont");
+const dropBtn = document.querySelector("#hamburgerCont");
 dropBtn.addEventListener("click", myFunction);
 
 // ---------------- Scroll to top arrow -----------------
 const mybutton = document.querySelector("#arrowDiv");
 
 function scrollFunction() {
-  const pxDelta = document.querySelector("header").offsetHeight;
+  const pxDelta = document.querySelector("header").offsetHeight - 1;
+  console.log(pxDelta);
   if (
     document.body.scrollTop > pxDelta ||
     document.documentElement.scrollTop > pxDelta
   ) {
-    mybutton.style.display = "block";
+    mybutton.style.bottom = "20px";
   } else {
-    mybutton.style.display = "none";
+    mybutton.style.bottom = "-100px";
   }
 }
 
@@ -105,3 +113,5 @@ function topFunction() {
 }
 
 mybutton.addEventListener("click", topFunction);
+
+// ------------------- linkContainer height ---------------
