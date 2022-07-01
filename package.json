@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "startserver": "npx webpack serve"
+    "startserver": "npx webpack serve",
+    "build": "npx webpack"
   },
   "keywords": [],
   "author": "",

@@ -30,7 +30,7 @@ const dropBtn = document.querySelector("#hamburgerCont");
 dropBtn.addEventListener("click", dropdownMenu);
 
 const mybutton = document.querySelector("#arrowDiv");
-mybutton.addEventListener("click", goToTop());
+mybutton.addEventListener("click", goToTop);
 window.onscroll = () => {
   showArrow(mybutton);
 };
