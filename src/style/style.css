@@ -50,6 +50,16 @@ footer{
     background-color: #ff6701;
 }
 
+footer a {
+    opacity: 1;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+footer a:hover {
+    opacity: 0.5;
+}
+
 .orange {
     color: rgb(255 103 1);
 }
