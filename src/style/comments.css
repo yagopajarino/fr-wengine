@@ -1,0 +1,26 @@
+.comments .comGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    background-color: #ffdac16b;
+    width: -webkit-fill-available;
+    transition: all 2s ease;
+}
+
+.comments p {
+    font-family: 'Quicksand', sans-serif;
+    padding: 1rem 0;
+    font-style: italic;
+}
+
+.comments span {
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1rem;
+    font-weight: 800;
+}
+
+.comments .comment {
+    padding: 0 3rem;
+    transition: all 2s ease;
+}
