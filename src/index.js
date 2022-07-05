@@ -13,7 +13,7 @@ import imgRedes from "./imgHandlers/img_redes";
 import imgIcon from "./imgHandlers/img_icon";
 import imgQuienSomos from "./imgHandlers/img_quieneSomos";
 import imgArrow from "./imgHandlers/img_arrow";
-import getCommentsDivs from "./comments/getCommentsDivs";
+import { getComments, cambiarTextos } from "./comments/getComments";
 import dropdownMenu from "./components/dropdown";
 import { showArrow, goToTop } from "./components/scrolling";
 
@@ -36,24 +36,22 @@ window.onscroll = () => {
   showArrow(mybutton);
 };
 
-const comments = getCommentsDivs();
-const commentsContainer = document.querySelector(".comGrid");
-// const p = document.createElement("p");
-// p.textContent = "Esto se anima";
-// commentsContainer.appendChild(p);
-commentsContainer.appendChild(comments[0]);
+const comments = getComments();
+const container = document.querySelector(".comGrid");
+const p = document.createElement("p");
+p.textContent = comments[0].comentario;
+const sp = document.createElement("span");
+sp.textContent = comments[0].nombre;
+container.appendChild(p);
+container.appendChild(sp);
+container.style.height = container.clientHeight;
+
 const WORDS_PER_MILISECOND = (50 / 60) * 1000;
 let i = 1;
+
 setInterval(() => {
-  const child = commentsContainer.querySelector(".comment");
-  if (child) {
-    commentsContainer.removeChild(child);
-  }
-  commentsContainer.appendChild(comments[i]);
+  p.style.opacity = 0;
+  sp.style.opacity = 0;
+  cambiarTextos(comments, i, p, sp);
   i = (i + 1) % comments.length;
-  // if (p.textContent == "Esto se anima") {
-  //   p.textContent = "Hola que tal";
-  // } else {
-  //   p.textContent = "Esto se anima";
-  // }
-}, WORDS_PER_MILISECOND * comments[i].querySelector("p").textContent.split(" ").length);
+}, WORDS_PER_MILISECOND * comments[i].comentario.split(" ").length + 2000);
