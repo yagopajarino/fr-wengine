@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "startserver": "npx webpack serve",
     "build": "npx webpack",
-    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",
